@@ -41,3 +41,8 @@ target_link_libraries(unittest_dubins
 target_link_libraries(unittest_dubins --coverage)
 
 add_test(unittest_dubins unittest_dubins)
+
+install(TARGETS dubins
+        ARCHIVE DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/lib
+        LIBRARY DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/lib
+        )
